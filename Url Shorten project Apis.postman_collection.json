@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "f8c3475f-c521-4fc6-ac93-9d8d27359d60",
+		"name": "Url Shorten project Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33121496"
+	},
+	"item": [
+		{
+			"name": "generate short URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destinationURL\": \"https://example.com/vsm1/shaik1/zzzzzzzzzzzzzzzzzzzzzzzzzz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/url/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"url",
+						"save"
+					],
+					"query": [
+						{
+							"key": "destinationURL",
+							"value": "\"https://example3.com\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate short URL Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/url/destination/4yQAqkTaO1gBz2qg6ARJ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"url",
+						"destination",
+						"4yQAqkTaO1gBz2qg6ARJ"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update destination URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shortenURL\": \"4yQAqkTaO1gBz2qg6ARJ\",\r\n    \"destinationURL\": \"https://example.com/vsm1/shaik1/Lolllllllllllllllllllllllllllllllllll\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/url/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"url",
+						"update"
+					],
+					"query": [
+						{
+							"key": "destinationURL",
+							"value": "\"https://example3.com\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update expire days",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shortenURL\": \"4yQAqkTaO1gBz2qg6ARJ\",\r\n    \"addOnExpireDays\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/url/update/expiredays",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"url",
+						"update",
+						"expiredays"
+					],
+					"query": [
+						{
+							"key": "destinationURL",
+							"value": "\"https://example3.com\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
