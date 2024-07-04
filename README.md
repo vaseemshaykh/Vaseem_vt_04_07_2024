@@ -1,9 +1,10 @@
-## HELP.md
+Here's the reframed `HELP.md` file for your URL Shortener Service project:
 
+```markdown
 # URL Shortener Service
 
 ## Overview
-This project is a URL Shortener Service that allows users to create shortened URLs, fetch the original URL using the shortened version, update destination URLs, and extend the expiration dates of the shortened URLs. The project is built using Spring Boot and PostgreSQL.
+This project implements a URL Shortener Service using Spring Boot and PostgreSQL, allowing users to create shortened URLs, retrieve the original URL, update destination URLs, and extend expiration dates.
 
 ## Features
 - **Shorten URL**: Generates a shortened URL for a given destination URL.
@@ -55,17 +56,17 @@ mvn spring-boot:run
 - **Request Body**:
   ```json
   {
-    "destinationURL": "https://example.com/vsm1/shaik1/zzzzzzzzzzzzzzzzzzzzzzzzzz"
-   }
+    "destinationURL": "https://example.com"
+  }
   ```
 - **Response**:
   ```json
   {
-    "statuscode": 200,
+    "statusCode": 200,
     "status": "Success",
     "message": "Short URL generated successfully",
     "data": "http://localhost:8080/nOfMCkPmVcoNnlw1ZOGG"
-}
+  }
   ```
 
 ### Fetch Original URL
@@ -74,11 +75,11 @@ mvn spring-boot:run
 - **Response**:
   ```json
   {
-    "statuscode": 200,
+    "statusCode": 200,
     "status": "Success",
     "message": "Destination URL fetched successfully",
-    "data": "https://example.com/vsm1/shaik1/Lolllllllllllllllllllllllllllllllllll"
-}
+    "data": "https://example.com"
+  }
   ```
 
 ### Update Destination URL
@@ -88,17 +89,17 @@ mvn spring-boot:run
   ```json
   {
     "shortenURL": "nOfMCkPmVcoNnlw1ZOGG",
-    "destinationURL": "https://example.com/vsm1/shaik1/Lolllllllllllllllllllllllllllllllllll"
-}
+    "destinationURL": "https://newexample.com"
+  }
   ```
 - **Response**:
   ```json
   {
-    "statuscode": 200,
+    "statusCode": 200,
     "status": "Success",
     "message": "Destination URL updated successfully",
     "data": true
-}
+  }
   ```
 
 ### Extend Expiration Date
@@ -109,21 +110,21 @@ mvn spring-boot:run
   {
     "shortenURL": "nOfMCkPmVcoNnlw1ZOGG",
     "addOnExpireDays": 15
-}
+  }
   ```
 - **Response**:
   ```json
   {
-    "statuscode": 200,
+    "statusCode": 200,
     "status": "Success",
     "message": "Expire days updated successfully",
     "data": true
-}
+  }
   ```
 
 ## Project Structure
 
-```bash
+```
 src
 ├── main
 │   ├── java
@@ -159,3 +160,6 @@ src
 
 ## Contact
 For any inquiries or issues, please contact shaykhvaseem69@gmail.com.
+```
+
+This file now provides a clear and concise overview of your URL Shortener Service project, including setup instructions, API endpoints with examples, project structure, contribution guidelines, and contact information. Adjust as needed to fit your specific implementation and preferences!
